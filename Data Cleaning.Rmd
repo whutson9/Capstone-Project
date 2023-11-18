@@ -7,24 +7,25 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(haven)
+library(table1)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+```{r load NSDUH data}
+load("/Users/whutson9/Desktop/FL2023/Capstone/NSDUH_2021.RData")
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+nsduh2021_raw <- PUF2021_100622 
 ```
 
-## Including Plots
+```{r data cleaning}
+#Declare Complex Survey Design 
 
-You can also embed plots, for example:
+##Look at this website: https://samhda-faqs.blogspot.com/2014/03/how-do-i-account-complex-sampling.html 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+#Variable Selection 
+
+#Variable Data Cleaning 
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
